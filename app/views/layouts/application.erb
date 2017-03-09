@@ -1,8 +1,104 @@
-<html>
+
+<html lang='en'>
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+
 		<title>Sinatra Framework</title>
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel='stylesheet'>
+		<style type="text/css"> /*testing out css*/
+			
+			body { 
+				color: white;
+			}
+
+			.jumbotron {
+				background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("http://img09.deviantart.net/b327/i/2013/115/b/0/teal_leather_texture_bright_blue_design_fabric_by_texturex_com-d6306pp.jpg");
+				
+   				background-position: center;
+   				background-size: contain;
+   				height: 575px;
+			}
+
+			#first-header {
+				color: white;
+				font-size: 48px;
+				font-weight: 550px;
+
+			}
+
+			#second-header {
+				color: white;
+				font-size: 21px;
+			}
+
+			#shorten {
+				border-width: 3.33px;
+				border-color: #ee6123;
+				color: white;
+				background-color: #ee6123;
+
+			}
+			#shorten:hover {
+				border-color: #e45212;
+				background-color: #e45212;
+			}
+
+			.navbar {
+				background-color: transparent;
+				background: transparent;
+				border-color: transparent;
+
+			}
+
+			.change-nav-textcolor {
+				color: white !important;
+			}
+
+
+		</style>
 	</head>
 	<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand change-nav-textcolor" href="#">Bitly Clone</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a class="change-nav-textcolor" href="#">TOUR <span class="sr-only">(current)</span></a></li>
+	        <li><a class="change-nav-textcolor" href="#">ENTERPRISE</a></li>
+	        <li><a class="change-nav-textcolor" href="#">RESOURCES</a></li>
+	        <li><a class="change-nav-textcolor" href="#">BLOG</a></li>
+	        <li><a class="change-nav-textcolor" href="#">ABOUT</a></li>
+	      </ul>
+
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a class="change-nav-textcolor" href="#" class="btn btn-default">LOGIN</a></li>
+	        <li><a class="change-nav-textcolor" href="#" class="btn btn-default">SIGN UP</a></li>
+	      </ul>
+	      </div> <!-- end container -->
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	
 		<%= yield %>
+
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
+
 </html>

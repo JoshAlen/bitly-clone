@@ -1,2 +1,58 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+
+<div class="jumbotron">
+
+
+	  <div class="container">
+	  	
+	  	<div>
+	  		<h1 id="first-header">THE LINK KNOWS ALL. SO CAN YOU. </h1>
+	  		<h3 id="second-header">Measure your links with Bitly, the world's leading link management platform.</h3>
+		</div>
+
+		<div class='container'> <!-- inner container -->
+
+		<form action="/urls" method="post">
+			
+			<div class="input-group">
+		      <input type="text" class="form-control well well-lg" name='long_url' placeholder="Enter URL: ">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default btn-lg" id="shorten" type="submit" name='Submit'>Shorten</button>
+		      </span>
+		 	</div><!-- /input-group -->
+		
+		</form> 
+
+		<table>
+
+			<th>Urls</th><th>Short Urls</th><th>Click Counts</th>
+
+			<% Url.all.each do |i| %>
+				
+				<tr>
+					<td><a><%= i.long_url %></a></td>
+					<td>
+					<a href="<%= i.short_url %>"><span>http://bit.ly/</span><%= i.short_url %></a>
+				
+					</td>
+					<td><%= i.click_count %></td>
+				</tr>
+
+			<% end %>	
+
+		</table>
+			
+		</div> <!-- end inner container -->
+
+
+	  </div> <!-- end first container -->
+
+</div> <!-- end jumbotron -->
+	
+
+	
+
+
+
+
+
+
